@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Custom Row",
+  "version": "1.0.0",
+  "description": "Customize YouTube’s homepage grid by choosing how many video and posts appear per row.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

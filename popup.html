@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YT Gridify</title>
+    <script src="popup.js" defer></script>
+    <style>
+      /* —— Reset & Base —— */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 280px;
+        padding: 16px;
+        background-color: #fff;
+        color: #1f2937;
+        font-family: system-ui, sans-serif;
+      }
+
+      /* —— Typography —— */
+      .title {
+        font-size: 1.25rem; /* like text-xl */
+        font-weight: 700; /* like font-bold */
+        text-align: center;
+        margin-bottom: 1rem; /* like mb-4 */
+        color: #111827;
+      }
+      .label {
+        font-size: 0.875rem; /* text-sm */
+        font-weight: 500; /* font-medium */
+        color: #374151;
+      }
+
+      /* —— Form Controls —— */
+      .flex-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem; /* space-y-3 equivalent spacing */
+      }
+      input[type="number"] {
+        width: 4rem;
+        padding: 4px 6px;
+        border: 1px solid #d1d5db; /* border-gray-300 */
+        border-radius: 0.375rem; /* rounded */
+        font-size: 0.875rem;
+      }
+      button {
+        width: 100%;
+        padding: 0.5rem 0;
+        background-color: #2563eb; /* blue-600 */
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      button:hover {
+        background-color: #1e40af; /* blue-700 */
+      }
+
+      /* —— Misc. —— */
+      hr {
+        border: 0;
+        border-top: 1px solid #cfd2d6;
+        margin: 1rem 0; /* my-4 */
+      }
+
+      /* —— Footer —— */
+      .footer {
+        text-align: center;
+        font-size: 0.75rem; /* text-xs */
+        color: #6b7280; /* gray-500 */
+      }
+      .footer a {
+        color: #3b82f6; /* blue-500 */
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">YT Custom Row</h1>
+
+    <div class="flex-row">
+      <label for="itemsInput" class="label">Items per Row</label>
+      <input type="number" id="itemsInput" min="1" value="5" />
+    </div>
+
+    <div class="flex-row">
+      <label for="postsInput" class="label">Posts per Row</label>
+      <input type="number" id="postsInput" min="1" value="5" />
+    </div>
+
+    <hr />
+
+    <div class="footer">
+      Created with ❤️ by
+      <a href="https://github.com/TEGRAXD" target="_blank"> TEGRA </a>
+    </div>
+  </body>
+</html>

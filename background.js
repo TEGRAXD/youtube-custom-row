@@ -1,0 +1,1 @@
+// Required to register a service worker in manifest v3
